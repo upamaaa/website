@@ -74,6 +74,11 @@ nav ul li a:active {
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
 }
 
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card img {
   width: 100%;
   height: 400px;
@@ -83,10 +88,15 @@ nav ul li a:active {
 
 .contact-form {
   padding: 40px;
+  background-color: #dadada;
 }
 
 h2 {
   padding-bottom: 10px;
+}
+
+.contact-form p {
+  font-family: "Poiret One", cursive;
 }
 
 .contact-form form {
@@ -100,6 +110,21 @@ h2 {
 .contact-form button {
   margin-bottom: 10px;
   padding: 10px;
+  margin-right: 50%;
+  border-radius: 10px;
+  border: 1px solid #ab8476;
+  outline: none;
+  font-family: "Poiret One", cursive;
+}
+
+.contact-form button {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form button:hover,
+.contact-form button:active {
+  background-color: #ab8476;
+  color: white;
 }
 
 .artist-statement {
@@ -109,12 +134,42 @@ h2 {
 }
 
 .artist-statement h4 {
-  padding: 12px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-family: "Poiret One", cursive;
 }
 
 .artist-statement p {
   font-size: 16px;
   line-height: 2.2;
+  font-family: "Poiret One", cursive;
+}
+
+.art-details {
+  display: flex;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.art-image {
+  margin-right: 30px;
+}
+
+.art-metadata .subtitle {
+  font-family: "Poiret One", cursive;
+  color: #ab8476;
+  padding-bottom: 20px;
+}
+
+.art-metadata p {
+  font-family: "Poiret One", cursive;
+  line-height: 30px;
+}
+
+.art-image img {
+  width: 550px;
+  height: 500px;
+  object-fit: contain;
 }
 
 footer {
@@ -125,16 +180,35 @@ footer {
 
 .social-icons a {
   margin-right: 16px;
+  color: black;
 }
 
 @media screen and (max-width: 768px) {
   .card {
     width: calc(50% - 20px);
   }
+  .artist-statement {
+    padding: 20px 100px;
+  }
+  .art-details {
+    padding: 20px;
+  }
+
+  .art-image img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .card {
     width: 100%;
+  }
+  .artist-statement {
+    padding: 20px;
+  }
+
+  .artist-statement p {
+    padding: 10px;
   }
 }
